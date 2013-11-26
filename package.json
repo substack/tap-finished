@@ -4,12 +4,12 @@
     "description": "detect when tap output is finished",
     "main": "index.js",
     "dependencies": {
-        "through": "~2.1.0",
-        "tap-parser": "~0.0.2"
+        "through": "~2.3.4",
+        "tap-parser": "~0.2.0"
     },
     "devDependencies": {
-        "tap": "~0.3.0",
-        "tape": "~0.2.2"
+        "tap": "~0.4.6",
+        "tape": "~2.3.0"
     },
     "scripts": {
         "test": "tap test/*.js"
