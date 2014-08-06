@@ -4,7 +4,6 @@
     "description": "detect when tap output is finished",
     "main": "index.js",
     "dependencies": {
-        "through": "~2.3.4",
         "tap-parser": "~0.2.0"
     },
     "devDependencies": {
