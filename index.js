@@ -1,5 +1,4 @@
 var parser = require('tap-parser');
-var through = require('through');
 
 module.exports = function (opts, cb) {
     if (typeof opts === 'function') {
