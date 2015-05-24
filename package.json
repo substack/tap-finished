@@ -5,7 +5,7 @@
     "main": "index.js",
     "dependencies": {
         "through": "~2.3.4",
-        "tap-parser": "~0.2.0"
+        "tap-parser": "~0.7.0"
     },
     "devDependencies": {
         "tap": "~0.4.6",
