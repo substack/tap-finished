@@ -1,5 +1,6 @@
 var parser = require('tap-parser');
 var through = require('through');
+var once = require('once');
 
 module.exports = function (opts, cb) {
     if (typeof opts === 'function') {
@@ -8,6 +9,7 @@ module.exports = function (opts, cb) {
     }
     if (!opts) opts = {};
     if (opts.wait === undefined) opts.wait = 1000;
+    cb = once(cb);
     
     var p = parser();
     var seen = { plan: null, asserts: 0 };
@@ -26,10 +28,7 @@ module.exports = function (opts, cb) {
         check();
     });
     
-    p.on('results', function () {
-        if (finished) return;
-        finish();
-    });
+    p.on('results', cb);
     
     return p;
     
